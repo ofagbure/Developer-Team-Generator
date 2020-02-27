@@ -4,7 +4,6 @@
   "description": "OOP and testing for week 10 homework",
   "main": "app.js",
   "directories": {
-    "lib": "lib",
     "test": "test"
   },
   "scripts": {
