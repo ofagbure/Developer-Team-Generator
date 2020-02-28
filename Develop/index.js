@@ -18,6 +18,9 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
+start();
+
+function start() {
 inquirer
     .prompt([
         {
@@ -55,7 +58,7 @@ inquirer
                 ])
 
                 .then(answers => addManager(answers));
-                
+
         }
         else if (response.role === "ENGINEER") {
             inquirer
@@ -114,7 +117,7 @@ inquirer
         else if (response.role === "I'M DONE") {
             generateHTML();
         }
-    });
+    })};
 
 function addManager(answers) {
     const manager = ` <div class="col-sm-6">
@@ -134,8 +137,9 @@ function addManager(answers) {
 </div>`
 
     employees.push(manager)
+    start();
 }
-function addEngineer() {
+function addEngineer(answers) {
     const engineer = `<div class="col-sm-6">
     <div class="card">
         <div class="card-header">
@@ -151,14 +155,15 @@ function addEngineer() {
         </div>
     </div>
     </div>`
-    employees.push(engineer);
+    employees.push(engineer)
+    start();
 }
 
-function addIntern() {
+function addIntern(answers) {
     const intern = `<div class="col-sm-6">
 <div class="card">
     <div class="card-header">
-        <p>${internName}</p>
+        <p>${answers.internName}</p>
        <p><i class="fas fa-book-reader">Intern</i></p>
     </div>
     <div class="card-body">
@@ -170,12 +175,13 @@ function addIntern() {
     </div>
 </div>
 </div>`;
-    employees.push(intern);
+    employees.push(intern)
+    start();
 }
 
-function generateHTML() {
+function generateHTML(answers) {
     const allEmployees = employees.join('')
-    const finalHtml = html + html.replace('{Placeholder}', allEmployees)
+    const finalHtml = html.replace('{Placeholder}', allEmployees)
     fs.writeFile("./index.html", finalHtml, (err) => {
         if (err) throw err;
         console.log("created our html file!");
