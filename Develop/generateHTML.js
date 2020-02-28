@@ -15,53 +15,6 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`; 
 
-const engineer = `<div class="col-sm-6">
-<div class="card">
-    <div class="card-header">
-        <p>Name</p>
-       <p> <i class="fas fa-laptop-code">Engineer</i></p>
-    </div>
-    <div class="card-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:</li>
-            <li class="list-group-item">Email:</li>
-            <li class="list-group-item">Github:</li>
-        </ul>
-    </div>
-</div>
-</div>`;
-
-const manager = ` <div class="col-sm-6">
-<div class="card">
-    <div class="card-header">
-        <p>Name</p>
-       <p> <i class="fas fa-mug-hot">Manager</i> </p>
-    </div>
-    <div class="card-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:</li>
-            <li class="list-group-item">Email:</li>
-            <li class="list-group-item">Office Number:</li>
-        </ul>
-    </div>
-</div>
-</div>`;
-
-const intern = `<div class="col-sm-6">
-<div class="card">
-    <div class="card-header">
-        <p>Name</p>
-       <p><i class="fas fa-book-reader">Intern</i></p>
-    </div>
-    <div class="card-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:</li>
-            <li class="list-group-item">Email:</li>
-            <li class="list-group-item">School:</li>
-        </ul>
-    </div>
-</div>
-</div>`;
 
 let newPlaceholder = '';
 
