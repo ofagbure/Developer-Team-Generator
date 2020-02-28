@@ -55,6 +55,7 @@ inquirer
                 ])
 
                 .then(answers => addManager(answers));
+                
         }
         else if (response.role === "ENGINEER") {
             inquirer
